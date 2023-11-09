@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nuevo Torneo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-align: center;
+      margin: 10px auto;
+      width: 150px;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    form {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 300px;
+      text-align: left;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    select {
+      margin-top: 5px;
+    }
+
+    .btn {
+      display: block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 10px;
+      width: 100%;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <a href="/torneo">Volver</a>
+  <h1>Nuevo Torneo</h1>
+  <form action="/torneo/new-torneo" method="post">
+    <label for="description">Nombre:</label>
+    <input id="description" type="text" name="description">
+    <label for="lugar">Ubicación:</label>
+    <input id="lugar" type="text" name="lugar">
+    <label for="categoria">Categoría:</label>
+    <select id="categoria" name="categoria">
+      <option value="categoria1">Categoría 1</option>
+      <option value="categoria2">Categoría 2</option>
+      <option value="categoria3">Categoría 3</option>
+      <option value="categoria4">Categoría 4</option>
+      <option value="categoria5">Categoría 5</option>
+      <option value="categoria6">Categoría 6</option>
+    </select>
+    <input class="btn" type="submit" value="OK">
+  </form>
+</body>
+</html>

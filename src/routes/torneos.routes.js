@@ -3,7 +3,7 @@ var router = Router()
 
 
 
-const {renderTorneoForm, createNewTorneo, renderTorneos, deleteTorneo,renderEditForm,updateTorneo} = require('../controllers/torneo.controllers')
+const {renderTorneoForm, createNewTorneo, renderTorneos, deleteTorneo ,renderEditForm, updateTorneo} = require('../controllers/torneo.controllers')
 
 router.get('/torneo/add',renderTorneoForm)
 
@@ -13,7 +13,7 @@ router.get('/torneo', renderTorneos)
 // editar
 
 
-router.get('/torneo/edit/:id', renderEditForm)
+router.get('/torneo/edit-torneo/:id', renderEditForm)
 
 router.put('/torneo/edit-torneo/:id', updateTorneo)
 

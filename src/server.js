@@ -38,6 +38,7 @@ app.use(methodOverride('_method'))
 //routes
 app.use(require('./routes/index'))
 app.use(require('./routes/torneos.routes'))
+app.use(require('./routes/players.routes'))
 
 
 app.use(express.static(path.join(__dirname, "public")));

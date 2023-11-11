@@ -1,11 +1,7 @@
 var {Schema, model} = require('mongoose')
 
 const TorneoSchema = new Schema({
-    code:{
-        type: Number,
-
-    },
-    description:{
+    nombre:{
         type:String
     },
     lugar:{

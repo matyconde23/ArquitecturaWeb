@@ -6,8 +6,8 @@ torneoCtrl.renderTorneoForm = (req, res) =>{
 }
 
 torneoCtrl.createNewTorneo = async(req, res ) => {
-    const { description, lugar, categoria} = req.body
-    var newTorneo = new Torneo({description, lugar,categoria})
+    const { nombre, lugar, categoria} = req.body
+    var newTorneo = new Torneo({nombre, lugar,categoria})
     await newTorneo.save()
     console.log(newTorneo)
     res.redirect('/torneo')
@@ -21,12 +21,12 @@ torneoCtrl.renderTorneos = async (req, res) =>{
 
 torneoCtrl.renderEditForm = async(req,res)=>{
     const torneo = await Torneo.findById(req.params.id).lean()
-    res.render('torneo/edit', {torneo})
+    res.render('torneo/edit-torneo', {torneo})
 }
 
 torneoCtrl.updateTorneo = async(req,res)=>{
-    const {code,description,lugar,categoria}= req.body
-    await Torneo.findByIdAndUpdate(req.params.id, {description,lugar,categoria});
+    const {code,nombre,lugar,categoria}= req.body
+    await Torneo.findByIdAndUpdate(req.params.id, {nombre,lugar,categoria});
     res.redirect("/torneo")
 }
 

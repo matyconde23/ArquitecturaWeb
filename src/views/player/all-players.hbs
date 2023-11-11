@@ -98,26 +98,28 @@
   </style>
 </head>
 <body>
-  <a href="/">volver</a>
+  <a href="/">Volver</a>
   <h1>Tabla de Datos</h1>
   <table>
     <thead>
       <tr>
-        <th>Nombre</th>
-        <th>Lugar</th>
+        <th>DNI</th>
+        <th>Edad</th>
         <th>Categoria</th>
-        <th>Acciones</th>
+        <th>Torneo</th>
       </tr>
     </thead>
     <tbody>
-      {{#each torneo}}
+      {{#each player}}
         <tr>
-          <td>{{nombre}}</td>
-          <td>{{lugar}}</td>
+          <td>{{dni}}</td>
+          <td>{{edad}}</td>
           <td>{{categoria}}</td>
+          <td>{{torneo}}</td>
+
           <td>
-            <a href="/torneo/edit/{{_id}}" class="editar-btn">Editar</a>
-            <form action="/torneo/delete/{{_id}}?_method=DELETE" method="POST">
+            <a href="/player/edit/{{_id}}" class="editar-btn">Editar</a>
+            <form action="/player/delete/{{_id}}?_method=DELETE" method="POST">
               <input type="hidden" name="_method" value="DELETE">
               <button type="submit" class="eliminar">Eliminar</button>
             </form>
@@ -126,6 +128,6 @@
       {{/each}}
     </tbody>
   </table>
-  <a href="/torneo/add">Agregar Torneo</a>
+  <a href="/player/add">Agregar Jugador</a>
 </body>
 </html>

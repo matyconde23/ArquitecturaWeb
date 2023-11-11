@@ -87,23 +87,33 @@
   </style>
 </head>
 <body>
-  <a href="/torneo">Volver</a>
-  <h1>Nuevo Torneo</h1>
-  <form action="/torneo/new-torneo" method="post">
-    <label for="nombre">Nombre:</label>
-    <input id="nombre" type="text" name="nombre">
-    <label for="lugar">Ubicación:</label>
-    <input id="lugar" type="text" name="lugar">
-    <label for="categoria">Categoría:</label>
-    <select id="categoria" name="categoria">
-      <option value="categoria1">Categoría 1</option>
-      <option value="categoria2">Categoría 2</option>
-      <option value="categoria3">Categoría 3</option>
-      <option value="categoria4">Categoría 4</option>
-      <option value="categoria5">Categoría 5</option>
-      <option value="categoria6">Categoría 6</option>
-    </select>
-    <input class="btn" type="submit" value="OK">
-  </form>
+  <tbody>
+    
+    <a href="/player">Volver</a>
+    <h1>Nuevo Torneo</h1>
+    <form action="/player/new-player" method="post">
+      <label for="dni">DNI:</label>
+      <input id="dni" type="number" name="dni">
+      <label for="edad">edad:</label>
+      <input id="edad" type="number" name="edad">
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" name="categoria">
+        <option value="categoria1">Categoría 1</option>
+        <option value="categoria2">Categoría 2</option>
+        <option value="categoria3">Categoría 3</option>
+        <option value="categoria4">Categoría 4</option>
+        <option value="categoria5">Categoría 5</option>
+        <option value="categoria6">Categoría 6</option>
+      </select>
+          <label for="torneo">Torneo:</label>
+            <select id="torneo" name="torneo">
+              {{#each torneos}}
+              <option value="{{nombre}}">{{nombre}}</option>
+              {{/each}}
+      </select>
+      <input class="btn" type="submit" value="Agregar">
+    </form>
+    
+  </tbody>
 </body>
 </html>

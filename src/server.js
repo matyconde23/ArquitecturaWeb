@@ -4,6 +4,7 @@ const express = require('express');
 var path = require('path')
 var morgan = require('morgan')
 const exphbs = require("express-handlebars");
+const expressValidator = require('express-validator');
 const _handlebars = require('handlebars')
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 const methodOverride = require('method-override')
@@ -12,7 +13,7 @@ const methodOverride = require('method-override')
 
 var app = express();
 
-// view engine setup
+
 app.set('port', process.env.PORT || 4000);
 app.set("views", path.join(__dirname, "views"));
 
@@ -35,10 +36,13 @@ app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
 
+
 //routes
 app.use(require('./routes/index'))
 app.use(require('./routes/torneos.routes'))
 app.use(require('./routes/players.routes'))
+
+
 
 
 app.use(express.static(path.join(__dirname, "public")));

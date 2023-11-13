@@ -116,9 +116,8 @@
           <td>{{edad}}</td>
           <td>{{categoria}}</td>
           <td>{{torneo}}</td>
-
           <td>
-            <a href="/player/edit/{{_id}}" class="editar-btn">Editar</a>
+            <a href="/player/edit-player/{{_id}}" class="editar-btn">Editar</a>
             <form action="/player/delete/{{_id}}?_method=DELETE" method="POST">
               <input type="hidden" name="_method" value="DELETE">
               <button type="submit" class="eliminar">Eliminar</button>

@@ -13,4 +13,5 @@ const TorneoSchema = new Schema({
     }
 })
 
+
 module.exports = model('Torneo', TorneoSchema);

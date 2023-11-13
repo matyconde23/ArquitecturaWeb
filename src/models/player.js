@@ -5,7 +5,6 @@ var torneo = require('./torneo')
 const PlayerSchema = new Schema({
     dni:{
         type: Number,
-        required:true
     },
     edad:{
         type:Number

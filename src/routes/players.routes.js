@@ -7,13 +7,13 @@ const { renderPlayerForm, createNewPlayer, renderPlayers, deletePlayer,renderEdi
 
 router.get('/player/add', renderPlayerForm)
 
-router.post('/player/new-player', createNewPlayer)
+router.post('/player/add', createNewPlayer)
 
 router.get('/player', renderPlayers)
 // editar
 
 
-router.get('/player/edit/:id', renderEditForm)
+router.get('/player/edit-player/:id', renderEditForm)
 
 router.put('/player/edit-player/:id', updatePlayer)
 
